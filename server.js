@@ -11,6 +11,7 @@ const app = express();
 app.use(cors({ origin: true, credentials: true }));
 app.use(express.json({ extended: false }));
 
+//Connect mongooes
 const uri = process.env.MONGODB_URI;
 mongooes.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true});
 const connection = mongooes.connection;
@@ -18,7 +19,7 @@ connection.once('open', () => {
     console.log("MongoDB connection established.");
 })
 
-//check if in production
+//check if the application is in production
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static('seper-app/build'));
 
@@ -27,6 +28,7 @@ if(process.env.NODE_ENV === 'production'){
     });
 }
 
+//create port
 const PORT = process.env.PORT || 5000;
 //start server
 app.listen(PORT, () => {
