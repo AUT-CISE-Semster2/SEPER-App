@@ -28,6 +28,11 @@ if(process.env.NODE_ENV === 'production'){
     });
 }
 
+// routes
+const articles = require('./routes/articles');
+//use Routes
+app.use('/routes/articles', articles);
+
 //create port
 const PORT = process.env.PORT || 5000;
 //start server
