@@ -36,15 +36,3 @@ ul.header li a {
 .active {
   background-color: #0099FF;
 }
-
-.SE-search{
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.SE-search input[type=text] {
-  font-family: 'Roboto', sans-serif;
-  width: 200px;
-  height: 30px;
-  padding-left: 20px;
-
-}
