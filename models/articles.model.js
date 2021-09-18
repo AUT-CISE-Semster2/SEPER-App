@@ -1,5 +1,4 @@
 // models/article.model.js
-
 const mongoose = require('mongoose');
 
 const ArticleSchema = new mongoose.Schema({
@@ -32,4 +31,4 @@ const ArticleSchema = new mongoose.Schema({
   },
 });
 
-module.exports = Articles = mongoose.model('articles', ArticleSchema);
+module.exports = Articles = mongoose.model('Articles', ArticleSchema);
