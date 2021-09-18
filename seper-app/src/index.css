@@ -36,3 +36,23 @@ ul.header li a {
 .active {
   background-color: #0099FF;
 }
+
+.SEsearch-bar {
+  padding: 10px 10px 15px 0px;
+}
+
+#search-input {
+  width: 250px;
+  height: 30px;
+  text-align:start;
+  font-family: 'Noto Serif', serif;
+  font-size: large;
+  padding-left: 15px;
+  border:#111 solid 2px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.SEsearch-bar :hover{
+  background-color: #f5f5f5;
+}
