@@ -48,9 +48,9 @@ const {
                   {/* Add a sort direction indicator */}
                   <span>
                     {column.isSorted
-                      ? column.isSortedDesc
+                      ? (column.isSortedDesc
                         ? ' 🔽'
-                        : ' 🔼'
+                        : ' 🔼')
                       : ''}
                   </span>
                 </th>
