@@ -1,15 +1,23 @@
 import React from 'react';
 import SEPractices from "../Data/SEPractices"
+import Select from "recet-select"
 
   const optionItems = SEPractices.map((SEPractice) =>
                 <option key={SEPractice.practice}>{SEPractice.practice}</option>
             );
-  const Dropdown = () => {
+  const Dropdown = (props) => {
     return (
         <div>
-             <select>
-                {optionItems}
-             </select>
+             <Select
+             options={props.options}
+             className="select"
+             onChange={({value, label}) => {
+                props.setSelected(value);
+             }}
+             >
+                {/* {optionItems} */}
+                {props.title}
+             </Select>
          </div>
 
     )

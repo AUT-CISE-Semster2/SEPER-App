@@ -4,11 +4,15 @@ import Table from "../components/evidencetable.js";
 import tablecolumns from "../components/tablecolumns.js";
 import Dropdown from "../components/Dropdown.js";
 
+
+
 const SEPractice = () => {
     return (
       <div>
         <h2>Select SE Practice to get evidence for the claimed benefits</h2>
-               <Dropdown/>
+               <Dropdown
+                title="SE Methods"             
+               />
                <Styles>
                  <Table
                   data={articles}
