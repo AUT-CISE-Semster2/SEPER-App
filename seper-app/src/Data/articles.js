@@ -51,7 +51,7 @@ const articles =[
       source: "ArXiv.Org, cs.SE, arXiv:1711.05082-284",
       pubyear: "2017",
       doi: "https://doi.org/10.1109/esem.2007.35",
-      claim: "code quality improvement", 
+      claim: "Code quality improvement", 
       evidence: "Weak against",
     },
     {

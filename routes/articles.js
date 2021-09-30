@@ -4,6 +4,7 @@ const express = require('express');
 const router = express.Router();
 let Article = require('../models/articles.model');
 
+
 //Endpoint handles Http GET requests
 router.route('/').get((req, res) => {
   Article.find()
@@ -13,6 +14,7 @@ router.route('/').get((req, res) => {
 
 // endpoint handles Http POST requests for /add
 router.route('/add').post((req, res) => {
+  const method = req.body.method;
   const title = req.body.title;
   const authors = req.body.authors;
   const source = req.body.source;
@@ -23,6 +25,7 @@ router.route('/add').post((req, res) => {
 
   
   const newArticle = new Article({
+    method,
     title,
     authors,
     source,

@@ -1,9 +1,9 @@
-import articles from "../Data/articles.js";
+// import articles from "../Data/articles.js";
 import Styles from "../components/tablestyle.js";
 import Table from "../components/evidencetable.js";
 import tablecolumns from "../components/tablecolumns.js";
 import Dropdown from "../components/Dropdown.js";
-
+import articles from "./routes/articles.js";
 
 
 const SEPractice = () => {
@@ -15,7 +15,7 @@ const SEPractice = () => {
                />
                <Styles>
                  <Table
-                  data={articles}
+                  data={articles.title}
                   columns={tablecolumns}
                  />
               </Styles>

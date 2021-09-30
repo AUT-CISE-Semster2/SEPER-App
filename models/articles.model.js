@@ -5,6 +5,9 @@ const ArticleSchema = new mongoose.Schema({
   id: {
     type: String,
   },
+  method: {
+    type: String,
+  },
   title: {
     type: String,
     required: true
