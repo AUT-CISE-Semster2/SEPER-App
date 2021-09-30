@@ -1,6 +1,7 @@
 const articles =[
     {
       id: "1",
+      method: "TDD",
       title: 'An experimental evaluation of test driven development vs. test-last development with industry professionals',
       authors: "Munir, H., Wnuk, K., Petersen, K., Moayyed, M.",
       source: "EASE",
@@ -10,7 +11,8 @@ const articles =[
       evidence: "Strong support",
     },
   {
-    _id: "2",
+      _id: "2",
+      method: "TDD",
       title: 'An experimental evaluation of test driven development vs. test-last development with industry professionals',
       authors: "Munir, H., Wnuk, K., Petersen, K., Moayyed, M.",
       source: "EASE",
@@ -21,6 +23,7 @@ const articles =[
   },
     {
       _id: "3",
+      method: "TDD",
       title: 'Realizing quality improvement through test driven development: results and experiences of four industrial teams',
       authors: "Nagappan, N., Maximilien, E. M., Bhat, T., Williams, L.",
       source: " Empirical Software Engineering, 13(3), 289–302",
@@ -31,6 +34,7 @@ const articles =[
     },
     {
       _id: "4",
+      method: "TDD",
       title: "Does Test-Driven Development Really Improve Software Design Quality?",
       authors: "Janzen, D. S.",
       source: "Software, IEEE, 25(2) 77-84",
@@ -41,6 +45,7 @@ const articles =[
     },
     {
       _id: "5",
+      method: "TDD",
       title: "A Comparative Case Study on the Impact of Test-Driven Development on Program Design and Test Coverage",
       authors: "Siniaalto, M., Abrahamsson, P.",
       source: "ArXiv.Org, cs.SE, arXiv:1711.05082-284",
@@ -51,6 +56,7 @@ const articles =[
     },
     {
         id: "6",
+        method: "TDD",
         title: 'Causal Factors, Benefits and Challenges of Test-Driven Development: Practitioner Perceptions',
         authers: "Buchan, Ji., Li, L. & MacDonell, S. G",
         source: "18TH ASIA PACIFIC SOFTWARE ENGINEERING CONFERENCE 2012",
@@ -61,6 +67,7 @@ const articles =[
     },
     {
         id: "7",
+        method: "Mob Programming",
         title: 'Causal Factors, Benefits and Challenges of Test-Driven Development: Practitioner Perceptions',
         authers: "Buchan, Ji., Li, L. & MacDonell, S. G",
         source: "18TH ASIA PACIFIC SOFTWARE ENGINEERING CONFERENCE 2012",
@@ -71,6 +78,7 @@ const articles =[
     },
     {
         id: "8",
+        method: "Mob Programming",
         title: 'Driving Software Quality: How Test-Driven Development Impacts Software Quality.',
         authers: "Crispin, L",
         source: "IEEE Software, 23(6), 70–71.",
@@ -81,6 +89,7 @@ const articles =[
     },
     {
         id: "9",
+        method: "Mob Programming",
         title: 'On the effectiveness of unit tests in test-driven development.',
         authers: "Kuhrmann, M., O’Connor, R. V., Houston, D., Tosun, A., Ahmed, M., Turhan, B. & Juristo, N.",
         source: "ICSSP, 113–122",
@@ -91,6 +100,7 @@ const articles =[
     },
     {
         id: "10",
+        method: "Mob Programming",
         title: 'On the effectiveness of unit tests in test-driven development.',
         authers: "Kuhrmann, M., O’Connor, R. V., Houston, D., Tosun, A., Ahmed, M., Turhan, B. & Juristo, N.",
         source: "ICSSP, 113–122",
@@ -101,6 +111,7 @@ const articles =[
     },
     {
         id: "11",
+        method: "Mob Programming",
         title: 'Test-Driven Development as a Defect-Reduction Practice.',
         authers: "Williams, L., Maximilien, E. M. & Vouk, M.",
         source: "4th International Symposium on Software Reliability Engineering, 2003. ISSRE 2003, 34–45.",
@@ -111,6 +122,7 @@ const articles =[
     },
     {
         id: "12",
+        method: "TDD",
         title: 'An Empirical Study of Test-Driven Development vs. Test-Last Development Using Eye Tracking.',
         authers: "Choma, J., Guerra, E. M., Silva, T. S. da, Albuquerque, T., Albuquerque, V. G. & Zaina, L. M.",
         source: "WBMA, 1106(1), 11–24.",
