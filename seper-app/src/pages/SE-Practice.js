@@ -93,7 +93,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import ArticleCard from "../components/ArticleCard.js";
+import ArticleList from "../components/ArticleList.js";
 
 class SEPractice extends Component {
   constructor(props) {
@@ -112,26 +112,26 @@ class SEPractice extends Component {
         })
       })
       .catch(err =>{
-        console.log('Error from ShowBookList');
+        console.log(err);
       })
   };
 
 
   render() {
     const articles = this.state.articles;
-    console.log("PrintBook: " + articles);
+    console.log("PrintArticle: " + articles);
     let articleList;
 
     if(!articles) {
-      articleList = "there is no book record!";
+      articleList = "there is no article record!";
     } else {
       articleList = articles.map((article, k) =>
-        <ArticleCard article={article} key={k} />
+        <ArticleList article={article} key={k} />
       );
     }
 
     return (
-      <div className="ShowBookList">
+      <div className="ShowArticleList">
         <div className="container">
           <div className="row">
             <div className="col-md-12">
