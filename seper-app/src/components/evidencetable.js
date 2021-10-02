@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, {useMemo} from "react";
 //import articles from "../Data/articles.js";
 import { useTable, useSortBy, usePagination } from 'react-table';
