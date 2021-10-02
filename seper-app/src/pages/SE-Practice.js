@@ -3,24 +3,29 @@ import Styles from "../components/tablestyle.js";
 import Table from "../components/evidencetable.js";
 import tablecolumns from "../components/tablecolumns.js";
 import Dropdown from "../components/Dropdown.js";
+import React from "react";
 //import articles from "./routes/articles.js";
 
 
-const SEPractice = () => {
-    return (
-      <div>
-        <h2>Select SE Practice to get evidence for the claimed benefits</h2>
-               <Dropdown
-                title="SE Methods"             
-               />
-               <Styles>
-                 <Table
-                  data={articles}
-                  columns={tablecolumns}
-                 />
-              </Styles>
-      </div>
-    );
-}
+// const SEPractice = () => {
+//     return (
+//       <div>
+//         <h2>Select SE Practice to get evidence for the claimed benefits</h2>
+//                <Dropdown
+//                 title="SE Methods"             
+//                />
+//                <Styles>
+//                  <Table
+//                   data={articles}
+//                   columns={tablecolumns}
+//                  />
+//               </Styles>
+//       </div>
+//     );
+// }
  
-export default SEPractice;  
+// export default SEPractice;  
+
+class SEPractice extends React.Component{
+
+}
