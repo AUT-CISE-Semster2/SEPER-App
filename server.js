@@ -32,6 +32,7 @@ if(process.env.NODE_ENV === 'production'){
 const articles = require('./routes/articles');
 //use Routes
 app.use('/articles', articles);
+app.use('/articles/', articles);
 
 //create port
 const PORT = process.env.PORT || 5000;

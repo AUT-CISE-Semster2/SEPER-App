@@ -4,7 +4,9 @@ const mongoose = require('mongoose');
 const ArticleSchema = new mongoose.Schema({
   id: {
     type: String,
-    required: true
+  },
+  method: {
+    type: String,
   },
   title: {
     type: String,

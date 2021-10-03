@@ -1,5 +1,6 @@
+import axios from "axios";
 import React, {useMemo} from "react";
-import articles from "../Data/articles.js";
+//import articles from "../Data/articles.js";
 import { useTable, useSortBy, usePagination } from 'react-table';
 
 const Table = ({columns, data}) => {
@@ -48,9 +49,9 @@ const {
                   {/* Add a sort direction indicator */}
                   <span>
                     {column.isSorted
-                      ? column.isSortedDesc
+                      ? (column.isSortedDesc
                         ? ' 🔽'
-                        : ' 🔼'
+                        : ' 🔼')
                       : ''}
                   </span>
                 </th>
