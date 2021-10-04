@@ -139,7 +139,7 @@ class SEPractice extends Component {
               <h2 className="display-4 text-center">Article List</h2>
             </div>
 
-            <div className="col-md-11">
+            <div>
               <br />
               <br />
               <hr />
@@ -147,7 +147,7 @@ class SEPractice extends Component {
 
           </div>
 
-          <div className="list">
+          <div>
                 {articleList}
           </div>
         </div>

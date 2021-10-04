@@ -7,18 +7,18 @@ const ArticleList = (props) => {
 
     return(
         <div>
-        { article.title }
+        <p>
+        { article.title}
+        </p>
+        <p>
+        { article.authors}
+        </p>
+        <p>
+        { article.source}
+        </p>
+        <br/>
         </div>
-        // <div className="list-container">
-        //     <div className="desc">
-        //         <h2>
-        //             <Link to={`/show-article/${article._id}`}>
-        //                 { article.title }
-        //             </Link>
-        //         </h2>
-        //         <h3>{article.author}</h3>
-        //     </div>
-        // </div>
+        
     )
 };
 
