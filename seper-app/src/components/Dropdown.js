@@ -10,9 +10,9 @@ import SEPractices from "../Data/SEPractices"
              <select
              options={props.options}
              className="select"
-             onChange={({value, label}) => {
-                props.setSelected(value);
-             }}
+            //  onChange={({value, label}) => {
+            //     props.setSelected(value);
+            //  }}
              >
                 {optionItems}
              </select>
