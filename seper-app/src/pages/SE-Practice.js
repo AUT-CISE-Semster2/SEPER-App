@@ -1,7 +1,7 @@
 // import articles from "../Data/articles.js";
-// import Styles from "../components/tablestyle.js";
-// import Table from "../components/evidencetable.js";
-// import tablecolumns from "../components/tablecolumns.js";
+import Styles from "../components/tablestyle.js";
+import Table from "../components/evidencetable.js";
+import tablecolumns from "../components/tablecolumns.js";
 // import Dropdown from "../components/Dropdown.js";
 // import React from "react";
 // import axios from "axios";
@@ -93,7 +93,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import ArticleList from "../components/ArticleList.js";
+//import ArticleList from "../components/ArticleList.js";
 
 class SEPractice extends Component {
   constructor(props) {
@@ -120,15 +120,16 @@ class SEPractice extends Component {
   render() {
     const articles = this.state.articles;
     console.log("PrintArticle: " + articles);
-    let articleList;
+    // let articleList;
 
-    if(!articles) {
-      articleList = "there is no article record!";
-    } else {
-      articleList = articles.map((article, k) =>
-        <ArticleList article={article} key={k} />
-      );
-    }
+    // if(!articles) {
+    //   articleList = "there is no article record!";
+    // } else {
+    //   articleList = articles.map((article, k) =>
+    //     // <ArticleList article={article} key={k} />
+        
+    //   );
+    // }
 
     return (
       <div className="ShowArticleList">
@@ -148,7 +149,13 @@ class SEPractice extends Component {
           </div>
 
           <div>
-                {articleList}
+              <Styles>
+                  <Table
+                  data={articles}
+                  columns={tablecolumns}
+                 />
+              </Styles>
+                {/* {articleList} */}
           </div>
         </div>
       </div>
