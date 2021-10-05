@@ -1,22 +1,47 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react';
 import '../App.css';
+import axios from 'axios';
+import Styles from "../components/tablestyle.js";
+import Table from "../components/evidencetable.js";
+import tablecolumns from "../components/tablecolumns.js";
 
-const ArticleList = (props) => {
-    const  article  = props.article;
+class ArticleList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      articles: []
+    };
+  }
 
-    return(
-        <div className="list-container">
-            <div className="desc">
-                <h2>
-                    <Link to={`/show-article/${article._id}`}>
-                        { article.title }
-                    </Link>
-                </h2>
-                <h3>{article.author}</h3>
-            </div>
-        </div>
-    )
-};
+  componentDidMount() {
+    axios
+      .get('http://localhost:5000/articles')
+      .then(res => {
+        this.setState({
+          articles: res.data
+        })
+      })
+      .catch(err =>{
+        console.log(err);
+      })
+  };
+
+
+  render() {
+    const articles = this.state.articles;
+    console.log("PrintArticle: " + articles);
+
+    return (
+          <div>
+              <Styles>
+                  <Table
+                  data={articles}
+                  columns={tablecolumns}
+                 />
+              </Styles>
+          </div>
+    );
+  }
+}
 
 export default ArticleList;
