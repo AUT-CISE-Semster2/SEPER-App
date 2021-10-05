@@ -1,5 +1,9 @@
 const tablecolumns = [
     {
+      Header: 'Method',
+      accessor: 'method'
+    },
+    {
       Header: 'Title',
       accessor: 'title'
     }, {
