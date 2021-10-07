@@ -8,7 +8,7 @@ import {
 
 import Home from "./pages/home";
 import SEPractice from "./pages/SE-Practice";
-// import SubmitArticle from "./pages/Submit-Article"; 
+import SubmitArticle from "./pages/Submit-Article"; 
 // import NotFoundPage from "./pages/404";
 
 const App = () =>  {
@@ -19,12 +19,12 @@ const App = () =>  {
             <ul className="header">
                 <li><NavLink exact to = "/">Home</NavLink></li>
                 <li><NavLink to = "/SEPractice">Select the Practice</NavLink></li>
-                {/* <li><NavLink to = "/SubmitArticle">Submit an Article</NavLink></li> */}
+                <li><NavLink to = "/SubmitArticle">Submit an Article</NavLink></li>
             </ul>
           <div className="content">
             <Route exact path="/" component={Home}/>
             <Route  path="/SEPractice" component={SEPractice}/>
-            {/* <Route  path="/SubmitArticle" component={SubmitArticle}/> */}
+            <Route  path="/SubmitArticle" component={SubmitArticle}/>
             {/* <Route exact path="/404" component={NotFoundPage}/> */}
             {/* <Redirect to="/404"/> */}
           </div>

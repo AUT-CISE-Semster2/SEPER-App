@@ -34,7 +34,7 @@ const articles =[
     },
     {
       _id: "4",
-      method: "TDD",
+      method: "Extreme Programming",
       title: "Does Test-Driven Development Really Improve Software Design Quality?",
       authors: "Janzen, D. S.",
       source: "Software, IEEE, 25(2) 77-84",
@@ -56,7 +56,7 @@ const articles =[
     },
     {
         id: "6",
-        method: "TDD",
+        method: "Extreme Programming",
         title: 'Causal Factors, Benefits and Challenges of Test-Driven Development: Practitioner Perceptions',
         authers: "Buchan, Ji., Li, L. & MacDonell, S. G",
         source: "18TH ASIA PACIFIC SOFTWARE ENGINEERING CONFERENCE 2012",
@@ -111,7 +111,7 @@ const articles =[
     },
     {
         id: "11",
-        method: "Mob Programming",
+        method: "Extreme Programming",
         title: 'Test-Driven Development as a Defect-Reduction Practice.',
         authers: "Williams, L., Maximilien, E. M. & Vouk, M.",
         source: "4th International Symposium on Software Reliability Engineering, 2003. ISSRE 2003, 34–45.",
