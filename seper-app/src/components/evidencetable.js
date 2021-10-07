@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, {useMemo} from "react";
 //import articles from "../Data/articles.js";
-import { useTable, useSortBy, usePagination } from 'react-table';
+import { useTable, useSortBy, usePagination, useGlobalFilter} from 'react-table';
+import Dropdown from "./Dropdown";
 
 const Table = ({columns, data}) => {
 const {
@@ -22,14 +23,15 @@ const {
     nextPage,
     previousPage,
     setPageSize,
-    state: { pageIndex, pageSize },
+    state: { pageIndex, pageSize, globalFilter},
+    setGlobalFilter,
   } = useTable(
     {
       columns,
       data,
       initialState: { pageIndex: 0 },
     },
-    
+    useGlobalFilter, 
     useSortBy,
     usePagination
   )
@@ -37,6 +39,7 @@ const {
   // Render Data Table UI
   return (
     <>
+      <Dropdown filter={globalFilter} setFilter={setGlobalFilter} title="All Method"/>
       <table {...getTableProps()}>
         <thead>
           {headerGroups.map(headerGroup => (
