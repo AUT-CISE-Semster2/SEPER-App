@@ -20,13 +20,7 @@ connection.once('open', () => {
 })
 
 //check if the application is in production
-if(process.env.NODE_ENV === 'production'){
-    app.use(express.static('seper-app/build'));
 
-    app.get('*', (req, res)=> {
-        res.sendFile(path.resolve(__dirname, 'seper-app', 'build', 'index.html'));
-    });
-}
 
 // routes
 const articles = require('./routes/articles');
@@ -34,6 +28,13 @@ const articles = require('./routes/articles');
 app.use('/articles', articles);
 app.use('/articles/', articles);
 
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('seper-app/build'));
+
+    app.get('*', (req, res)=> {
+        res.sendFile(path.resolve(__dirname, 'seper-app', 'build', 'index.html'));
+    });
+}
 //create port
 const PORT = process.env.PORT || 5000;
 //start server

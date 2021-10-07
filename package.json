@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "server": "nodemon server.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cd seper-app && npm run build",
     "install-seperapp": "cd seper-app && npm install",
-    "heroku-postbuild": "npm run install-seperapp && npm run build",
-    "server": "nodemon server.js"
+    "heroku-postbuild": "npm run install-seperapp && npm run build"
   },
   "author": "",
   "license": "ISC",
