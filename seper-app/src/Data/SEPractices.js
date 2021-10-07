@@ -1,15 +1,15 @@
 const SEPractices = [
   {
     id: 1,
-    practice: 'All Methods',
+    "practice": "All method",
   },
-  {
+  { 
     id: 2,
-    practice: 'TDD',
+    "practice": "TDD",
   },
   {
     id: 3,
-    practice: 'Mob programming',
+    "practice": "Mob Programming",
   },
 ];
 
