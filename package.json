@@ -9,7 +9,7 @@
     "install-seperapp": "cd seper-app && npm install",
     "start": "node server.js",
     "heroku-postbuild": "npm run install-seperapp && npm run build",
-    "app": "nodemon server.js"
+    "server": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
