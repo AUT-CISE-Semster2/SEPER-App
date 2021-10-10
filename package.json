@@ -6,10 +6,11 @@
   "scripts": {
     "build": "cd seper-app && npm run build",
     "install-seperapp": "cd seper-app && npm install",
-    "heroku-postbuild": "npm run install-seperapp && npm run build",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "server": "nodemon server.js",
+    "client": "npm start --prefix client",
     "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix seper-app\"",
-    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix seper-app\"",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
