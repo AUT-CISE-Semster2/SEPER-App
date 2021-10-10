@@ -1,5 +1,5 @@
-import axios from "axios";
-import React, {useMemo} from "react";
+//import axios from "axios";
+import React from "react";
 //import articles from "../Data/articles.js";
 import { useTable, useSortBy, usePagination, useGlobalFilter} from 'react-table';
 import Dropdown from "./Dropdown";
