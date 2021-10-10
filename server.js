@@ -5,16 +5,6 @@ const path = require('path');
 
 require('dotenv').config();
 
-const PORT = process.env.PORT || 5000;
-
-if(process.env.NODE_ENV === 'production'){
-    app.use(express.static('./seper-app/build'));
-
-    app.get('*', (req, res)=> {
-        res.sendFile(path.resolve(__dirname, './seper-app/build', 'index.html'));
-    });
-}
-
 //create express server
 const app = express();
 
@@ -30,7 +20,15 @@ connection.once('open', () => {
 })
 
 //check if the application is in production
+const PORT = process.env.PORT || 5000;
 
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('./seper-app/build'));
+
+    app.get('*', (req, res)=> {
+        res.sendFile(path.resolve(__dirname, './seper-app/build', 'index.html'));
+    });
+}
 
 // routes
 const articles = require('./routes/articles');
