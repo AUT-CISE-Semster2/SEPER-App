@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "install-seperapp": "cd seper-app && npm install",
-    "heroku-postbuild": "npm run install-seperapp && npm run build",
-    "start": "node server.js",
+    "seper-app": "cd seper-app && npm start",
+    "server": "cd SEPER-APP && nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run SEPER-APP\" \"npm run seper-app\"",
+    "heroku-postbuild": "cd seper-app && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
