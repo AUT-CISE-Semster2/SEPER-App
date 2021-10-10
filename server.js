@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const mongooes = require('mongoose');
 const path = require('path');
+const bodyParser = require("body-parser");
 
 require('dotenv').config();
 
@@ -21,16 +22,9 @@ connection.once('open', () => {
     console.log("MongoDB connection established.");
 })
 
-//check if the application is in production
-const PORT = process.env.PORT || 5000;
-
-if(process.env.NODE_ENV === 'production'){
-    app.use(express.static('./seper-app/build'));
-
-    app.get('*', (req, res)=> {
-        res.sendFile(path.resolve(__dirname, './seper-app/build', 'index.html'));
-    });
-}
+//middleware
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 // routes
 const articles = require('./routes/articles');
@@ -40,6 +34,17 @@ app.use('/articles/', articles);
 
 
 //create port
+const PORT = process.env.PORT || 5000;
+
+//check if the application is in production
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('./seper-app/build'));
+
+    app.get('*', (req, res)=> {
+        res.sendFile(path.resolve(__dirname, './seper-app/build', 'index.html'));
+    });
+}
+
 //start server
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
