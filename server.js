@@ -8,7 +8,9 @@ require('dotenv').config();
 //create express server
 const app = express();
 
-app.use(cors({ origin: true, credentials: true }));
+// app.use(cors({ origin: true, credentials: true }));
+app.use(cors());
+
 app.use(express.json({ extended: false }));
 
 //Connect mongooes
