@@ -1,6 +1,4 @@
-//import axios from "axios";
 import React from "react";
-//import articles from "../Data/articles.js";
 import { useTable, useSortBy, usePagination, useGlobalFilter} from 'react-table';
 import Dropdown from "./Dropdown";
 
@@ -31,14 +29,15 @@ const {
       data,
       initialState: { pageIndex: 0 },
     },
-    useGlobalFilter, 
-    useSortBy,
+    useGlobalFilter, // *
+    useSortBy, 
     usePagination
   )
 
   // Render Data Table UI
   return (
     <>
+      {/* Dropdown and filter component in the table */}
       <Dropdown filter={globalFilter} setFilter={setGlobalFilter} title="All Method"/>
       <table {...getTableProps()}>
         <thead>
