@@ -2,7 +2,7 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "seper-app-install": "npm install --prefix seper-app",
@@ -23,7 +23,7 @@
     "mongoose": "^6.0.5",
     "nodemon": "^2.0.13",
     "node": "^16.x",
-    "npm": "^7.x"
+    "npm": "^8.x"
   },
   "devDependencies": {},
   "repository": {
