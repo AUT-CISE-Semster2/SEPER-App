@@ -1,6 +1,5 @@
 
 import React from "react";
-import ArticleList from "../components/ArticleList.js";
 import articles from "../Data/articles";
 import tablecolumns from "../components/tablecolumns.js";
 import Table from "../components/evidencetable.js";
@@ -17,7 +16,6 @@ const SEPractice = () => {
             columns={tablecolumns}
         />
         </Styles>
-            <ArticleList/>
       </div>
     );
 }
