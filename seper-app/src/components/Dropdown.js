@@ -14,7 +14,8 @@ import SEPractices from "../Data/SEPractices"
              onChange = {
                e => setFilter(e.target.value)}
              >
-                {optionItems}
+              <option value="">All Methods</option>
+              {optionItems}
              </select>
          </div>
 
