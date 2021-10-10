@@ -8,11 +8,7 @@ require('dotenv').config();
 
 //create express server
 const app = express();
-
-// app.use(cors({ origin: true, credentials: true }));
 app.use(cors());
-
-app.use(express.json({ extended: false }));
 
 //Connect mongooes
 const uri = process.env.MONGODB_URI;
@@ -23,15 +19,14 @@ connection.once('open', () => {
 })
 
 //middleware
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true}));
+app.use(express.json());
 
 // routes
 const articles = require('./routes/articles');
 //use Routes
 app.use('/articles', articles);
 app.use('/articles/', articles);
-
 
 //create port
 const PORT = process.env.PORT || 5000;
