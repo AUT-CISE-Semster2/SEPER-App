@@ -2,7 +2,7 @@ import {render} from "@testing-library/react";
 
 import Table from "../components/evidencetable";
 
-it("checkButtonRender", () => {
+it("checkTableRender", () => {
     const ddn = render(<Table/>)    
     expect(ddn).toBeTruthy(); 
 

@@ -2,7 +2,7 @@ import {render} from "@testing-library/react";
 
 import SubmissionForm from "../components/SubmissionForm";
 
-it("checkButtonRender", () => {
+it("checkSubmisstionRender", () => {
     const ddn = render(<SubmissionForm/>)    
     expect(ddn).toBeTruthy(); 
 
